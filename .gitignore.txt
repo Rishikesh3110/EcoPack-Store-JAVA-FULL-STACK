@@ -1,0 +1,28 @@
+# Eclipse / STS
+.metadata/
+.settings/
+.project
+.classpath
+
+# Java
+**/target/
+**/.mvn/wrapper/maven-wrapper.jar
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db

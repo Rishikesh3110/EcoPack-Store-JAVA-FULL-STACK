@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #f8faf8;
+  color: #213123;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  object-fit: cover;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #2e7d32, #4caf50);
+  border: none;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #245d28, #3b8f3f);
+}
+
+.card {
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.hero-banner {
+  background: linear-gradient(135deg, #1b5e20, #4caf50 70%, #81c784);
+  color: white;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  background: linear-gradient(90deg, rgba(0,0,0,0.15), rgba(0,0,0,0.02));
+}
+
+.product-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.13);
+}
+
+.nav-link.active {
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border-radius: 50%;
+}
+
+.sidebar {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #1b5e20, #2e7d32);
+  color: white;
+}
+
+.sidebar .nav-link {
+  color: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  background: rgba(255,255,255,0.16);
+}
+
+.stat-card {
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ffffff, #f4fff4);
+}
+
+.footer {
+  background: #183a24;
+  color: white;
+}
