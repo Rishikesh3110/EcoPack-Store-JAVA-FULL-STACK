@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Eco-friendly placeholder">
+  <rect width="800" height="600" fill="#eef7ee"/>
+  <rect x="90" y="90" width="620" height="420" rx="32" fill="#ffffff" stroke="#8bc34a" stroke-width="8"/>
+  <path d="M260 390c20-85 55-150 115-215 38 44 64 78 85 130-35 24-74 38-114 38-31 0-56-8-86-20Z" fill="#5e9f4b"/>
+  <path d="M300 260c40-40 83-63 142-70 24 37 33 74 30 117-46 7-85 2-126-14-22-8-34-19-46-33Z" fill="#7cb342"/>
+  <circle cx="290" cy="240" r="18" fill="#4caf50"/>
+  <circle cx="378" cy="206" r="12" fill="#66bb6a"/>
+  <circle cx="438" cy="255" r="10" fill="#43a047"/>
+  <path d="M255 430h290" stroke="#6b8e23" stroke-width="12" stroke-linecap="round"/>
+  <path d="M520 180c35 0 70 20 86 49" stroke="#4caf50" stroke-width="10" stroke-linecap="round"/>
+  <path d="M530 176c20 6 36 18 48 35" stroke="#8bc34a" stroke-width="8" stroke-linecap="round"/>
+  <text x="400" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#2e7d32">Eco-friendly product</text>
+</svg>

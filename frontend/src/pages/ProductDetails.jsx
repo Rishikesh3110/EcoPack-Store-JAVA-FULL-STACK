@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { getProducts } from "../services/ProductService";
+import ecoBag from "../assets/products/eco-bag.jpg";
+import paperBox from "../assets/products/paper-box.jpg";
+import arecaPlate from "../assets/products/areca-plate.jpg";
+import garbageBag from "../assets/products/garbage-bag.jpg";
+import courierCover from "../assets/products/courier-cover.jpg";
+import defaultPlaceholder from "../assets/products/default-eco-placeholder.svg";
 
 function ProductDetails({ addToCart }) {
   const { id } = useParams();
@@ -21,11 +27,28 @@ function ProductDetails({ addToCart }) {
 
   if (!product) return <div className="container py-5">Loading...</div>;
 
+  const imageMap = {
+    "eco cotton bag": ecoBag,
+    "eco bag": ecoBag,
+    "paper food box": paperBox,
+    "food box": paperBox,
+    "areca plate pack": arecaPlate,
+    "areca plate": arecaPlate,
+    "compostable garbage bags": garbageBag,
+    "garbage bag": garbageBag,
+    "eco courier cover": courierCover,
+    "courier cover": courierCover,
+  };
+
+  const normalizedName = (product?.name || "").trim().toLowerCase();
+  const normalizedCategory = (product?.category || "").trim().toLowerCase();
+  const imageSrc = imageMap[normalizedName] || imageMap[normalizedCategory] || defaultPlaceholder;
+
   return (
     <div className="container py-5">
       <div className="row g-4">
         <div className="col-lg-6">
-          <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80" className="img-fluid rounded-4 shadow" alt={product.name} />
+          <img src={imageSrc} className="img-fluid rounded-4 shadow" alt={product.name} style={{ width: "100%", height: "420px", objectFit: "cover" }} />
         </div>
         <div className="col-lg-6">
           <span className="badge bg-success-subtle text-success-emphasis mb-3">{product.category}</span>

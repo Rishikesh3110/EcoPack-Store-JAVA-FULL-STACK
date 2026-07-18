@@ -1,4 +1,10 @@
 import { useNavigate } from "react-router-dom";
+import ecoBag from "../assets/products/eco-bag.jpg";
+import paperBox from "../assets/products/paper-box.jpg";
+import arecaPlate from "../assets/products/areca-plate.jpg";
+import garbageBag from "../assets/products/garbage-bag.jpg";
+import courierCover from "../assets/products/courier-cover.jpg";
+import defaultPlaceholder from "../assets/products/default-eco-placeholder.svg";
 
 function ProductCard({ product, addToCart, wishlist, toggleWishlist, onEdit, onDelete, isAdmin }) {
   const navigate = useNavigate();
@@ -12,6 +18,23 @@ function ProductCard({ product, addToCart, wishlist, toggleWishlist, onEdit, onD
     "Compostable Garbage Bags": "🗑️",
   };
 
+  const imageMap = {
+    "eco cotton bag": ecoBag,
+    "eco bag": ecoBag,
+    "paper food box": paperBox,
+    "food box": paperBox,
+    "areca plate pack": arecaPlate,
+    "areca plate": arecaPlate,
+    "compostable garbage bags": garbageBag,
+    "garbage bag": garbageBag,
+    "eco courier cover": courierCover,
+    "courier cover": courierCover,
+  };
+
+  const normalizedName = (product?.name || "").trim().toLowerCase();
+  const normalizedCategory = (product?.category || "").trim().toLowerCase();
+  const imageSrc = imageMap[normalizedName] || imageMap[normalizedCategory] || defaultPlaceholder;
+
   const isSaved = wishlist.some((item) => item.id === product.id);
 
   return (
@@ -20,7 +43,7 @@ function ProductCard({ product, addToCart, wishlist, toggleWishlist, onEdit, onD
         <button className="btn btn-light btn-sm wishlist-btn" onClick={() => toggleWishlist(product)}>
           {isSaved ? "♥" : "♡"}
         </button>
-        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80" className="card-img-top" alt={product.name} style={{ height: "220px" }} />
+        <img src={imageSrc} className="card-img-top" alt={product.name} style={{ height: "220px", objectFit: "cover" }} />
         <div className="card-body">
           <div className="d-flex justify-content-between align-items-center mb-3">
             <span className="badge bg-success-subtle text-success-emphasis">{product.category}</span>
