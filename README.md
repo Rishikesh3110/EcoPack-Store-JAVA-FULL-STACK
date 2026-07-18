@@ -202,6 +202,11 @@ This project demonstrates:
 
 ---
 
+## 📄 Project Documents
+
+- 📘 [Project Documentation](Docs/EcoPack_Store_Documentation.pdf)
+- 📊 [Project Presentation](Docs/EcoPack_Store_Presentation.pptx)
+
 ## 👨‍💻 Developed By
 
 **Rishikesh Ganta**
